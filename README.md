@@ -50,9 +50,12 @@ Commit and push your latest save onto your main branch using which ever git meth
 ```
 npm run deploy
 ```
+This will automatically create a new branch caled `gh-pages` on your repo.
 
 ### 4️⃣ Step 4: Activate GitHub Pages
-Make sure you are running `gh-pages` instead of `main`
+Make sure you are running `gh-pages` instead of `main`.
+
+Now wait for GitHub Pages to finish its action and visit your website.
 
 ## 🐛 Common React + Vite and GitHub Pages Problems and Solutions
 These are some problem I have personally ran into.
