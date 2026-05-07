@@ -6,8 +6,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/free-mode';
 
+const BASE_URL = import.meta.env.BASEURL;
+
 function Projects() {
 
+  
   return (
     <>
     <div className='ProjectBlock p-4'>
@@ -33,7 +36,9 @@ function Projects() {
         <SwiperSlide>
           <div className='flex justify-center'>
             <a href=''>
-            <img src="./images/JobTrackerImg.png" alt='JobTrackerImg' className=""/>
+            {/* <img src="./images/JobTrackerImg.png" alt='JobTrackerImg' className=""/> */}
+            {/* BASE_URL for github pages*/}
+            <img src={BASE_URL + "/images/JobTrackerImg.png"} alt='JobTrackerImg' className=""/>
             <div className='slide-content'>
               <h4 className='proj-name'>Personal Job Tracker</h4>
               <p className='h-[6rem] overflow-y-scroll'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus,
