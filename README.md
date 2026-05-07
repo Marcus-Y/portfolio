@@ -79,7 +79,7 @@ When working in a localhost website, usually your link tags are:
 ```HTML
 <a href="/">Home</>
 ```
-You need to change it to `/<your-github-repo-name>/`, the one in <a href="https://github.com/Marcus-Y/portfolio/edit/main/README.md#step-1-build-and-deploy-your-project">`Setup Step 1`</a>
+You need to change it to `/<your-github-repo-name>/`, the one in <a href="https://github.com/Marcus-Y/portfolio#1%EF%B8%8F%E2%83%A3-step-1-build-and-deploy-your-project">`Setup Step 1`</a>
 ```HTML
 <a href="/<your-github-repo-name>/">Home</>
 ```
