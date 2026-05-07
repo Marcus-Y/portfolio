@@ -8,6 +8,11 @@ My <a href="https://marcus-y.github.io/portfolio/">personal site</a> to showcase
   <li>DaisyUI</li>
 </ul>
 
+## Future Plans
+* Create individual showcases for each projects.
+* Add more details
+* Create a backend to interact with my Personal Job Tracker.
+
 # 📝 Documentations for others to use
 In case if anyone wants to build their own React + Vite or ran into the same problems I had.
 
