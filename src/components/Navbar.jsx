@@ -12,7 +12,7 @@ function Navbar(){
             <ul
                 tabIndex="-1"
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-[100px] p-2 shadow border">
-                <li className='py-4 justify-center'><a className='w-[80%] justify-center' href="/">Home</a></li>
+                <li className='py-4 justify-center'><a className='w-[80%] justify-center' href="/portfolio">Home</a></li>
                 <li className='py-4 justify-center'><a className='w-[80%] justify-center' href='https://github.com/marcus-y'> <img className='icon' src='https://cdn-icons-png.flaticon.com/128/2111/2111432.png' alt='GitHub'></img></a></li>
             </ul>
             </div>
