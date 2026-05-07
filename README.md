@@ -1,16 +1,85 @@
-# React + Vite
+# Marcus Yau Portfolio
+My <a href="https://marcus-y.github.io/portfolio/">personal site</a> to showcase projects.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Stack Used
+<ul>
+  <li>React + Vite</li>
+  <li>TailwindCSS</li>
+  <li>DaisyUI</li>
+</ul>
 
-Currently, two official plugins are available:
+# 📝 Documentations for others to use
+In case if anyone wants to build their own React + Vite or ran into the same problems I had.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 👟 Setup Steps to get a working React + Vite on GitHub Pages
 
-## React Compiler
+### 1️⃣ Step 1: Build and Deploy your Project
+You need the `gh-pages` package to help with your deployment.
+```bash
+npm install gh-pages --save-dev
+```
+Go to your `package.json` and add this to the scripts:
+```JSON
+"scripts": {
+  "homepage": "https:/<github-username>.github.io/<your-github-repo-name>/",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+```
+<em>**Note that I am using React + Vite so deploy might differ from ReactJS**</em>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+If not React + Vite it might look something like this:
+```JSON
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
+Then go into `vite.config.js` and add `base`
+```JS
+export default defineConfig({
+  plugins: [tailwindcss(),react()],
+  base: "/<your-github-repo-name>/",
+})
+```
 
-## Expanding the ESLint configuration
+### 2️⃣ Step 2: Commit and Push
+Commit and push your latest save onto your main branch using which ever git method you want.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3️⃣ Step 3: Run the Deployment
+```
+npm run deploy
+```
+
+### 4️⃣ Step 4: Activate GitHub Pages
+Make sure you are running `gh-pages` instead of `main`
+
+## 🐛 Common React + Vite and GitHub Pages Problems and Solutions
+These are some problem I have personally ran into.
+
+### 1. Blank images in `<img>` tag
+When you have image tags that link to a local image, it might not show it.
+
+Make sure to create an `/images` folder and move it under the `/public` folder
+```
+/public
+  ->  /images
+      ->  img1.png
+      ->  img2.png
+      ->  img3.png
+      ->  etc...
+```
+then you can simply source it:
+```HTML
+<img src="./images/img1.png" alt='img1'/>
+```
+
+### 2. Linking to index.html / landing page
+When working in a localhost website, usually your link tags are:
+```HTML
+<a href="/">Home</>
+```
+You need to change it to `/<your-github-repo-name>/`, the one in <a href="https://github.com/Marcus-Y/portfolio/edit/main/README.md#step-1-build-and-deploy-your-project">`Setup Step 1`</a>
+```HTML
+<a href="/<your-github-repo-name>/">Home</>
+```
